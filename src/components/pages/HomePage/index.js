@@ -6,7 +6,8 @@ import RenderWeatherData from "components/RenderWeatherData";
 import useGetPosition from "customHooks/useGetPosition";
 import { useGetWeatherDataContext } from "customHooks/useGetWeatherDataContext";
 import AlternateView from "./components/AlternateView";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import ErrorPage from "../ErrorPage";
 const HomePage = () => {
   const { position } = useGetPosition();
   const { weatherData } = useGetWeatherDataContext({ position });
@@ -14,9 +15,9 @@ const HomePage = () => {
   changeBgBodyPage(url);
   return (
     <>
-    <Helmet>
-      <title>Inicio | Weather App</title>
-    </Helmet>
+      <Helmet>
+        <title>Inicio | Weather App</title>
+      </Helmet>
       <div className="HomePage">
         <SearchInput />
         {!weatherData && <Loader />}
@@ -36,6 +37,7 @@ const HomePage = () => {
         )}
 
         {weatherData === "unaccepted" && <AlternateView />}
+        {weatherData.error && <ErrorPage error={weatherData.error} />}
       </div>
     </>
   );
