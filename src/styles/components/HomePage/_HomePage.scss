@@ -1,0 +1,13 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+.HomePage{
+    color: map-get($colors , "text");
+    @include fullSize(none,100%,605px,100%);
+    @include flexAlign(column,10px,nowrap,flex-start,center);
+
+    @include responsive (550px) {
+        min-height: 100vh;
+        width: 95%;
+    }
+    
+}

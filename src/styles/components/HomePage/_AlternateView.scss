@@ -1,0 +1,45 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+
+.AlternateView {
+    @include fullSize(100%, 100%, 555px, 555px);
+    @include flexAlign(normal, 5px, wrap);
+
+    @include responsive(550px) {
+        height: 100%;
+        gap: 20px;
+        padding-top: 10px;
+    }
+
+    &__citiesContainer {
+        @include size(100%, auto);
+        @include flexAlign(normal, 7.5px, wrap);
+
+        @include responsive(324px) {
+            gap: 10px;
+        }
+    }
+
+    &__h3 {
+        &--citiesContainer {
+            width: 100%;
+            @include ResetTexts (center);
+        }
+    }
+
+    &__h4 {
+        &--recentSearch {
+            @include ResetTexts (start);
+        }
+    }
+
+    &__recentSearch {
+        width: 100%;
+    }
+
+    &__button {
+        &--recentSearch {
+            @include btn-primary();
+        }
+    }
+}

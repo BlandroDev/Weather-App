@@ -1,0 +1,121 @@
+@import "./vars";
+
+@mixin responsive ($width : 480px) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin flexAlign ($direction:normal, $gap:none, $wrap : none, $justify:center, $align:center) {
+    @if $direction==column {
+        display: flex;
+        flex-direction: column;
+        justify-content: $justify;
+        align-items: $align;
+        flex-wrap: $wrap;
+        gap: $gap;
+    }
+
+    @else {
+        display: flex;
+        justify-content: $justify;
+        align-items: $align;
+        flex-wrap: $wrap;
+        gap: $gap;
+    }
+}
+
+
+@mixin fullSize ($min-width:false, $width:false, $min-height:false, $height : false) {
+    @if $min-width {
+        min-width: $min-width;
+        width: $width;
+        min-height: $min-height;
+        height: $height;
+    }
+
+    @else {
+        min-width: 100vw;
+        width: 100vw;
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+
+@mixin positionAbsoluteRT($right, $top) {
+    position: absolute;
+    right: $right;
+    top: $top;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin w_h_p_m ($width, $height, $padding:0, $margin:0) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin btn-primary() {
+    @include size(auto, 30px);
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 20px;
+    color: map-get($colors, "text");
+    background-color: map-get($colors, "btn-bg");
+    transition: all 0.5s;
+    margin-top: 10px;
+    box-shadow: map-get($shadows, "boxes");
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: map-get($colors, "btnHover-bg");
+    }
+}
+
+@mixin btn-secondary() {
+    @include size(90%, 30px);
+    border: none;
+    outline: none;
+    color: map-get($colors, "text");
+    border-radius: 20px;
+    background-color: map-get($colors, "btn-bg");
+    cursor: pointer;
+    transition: transform 0.5s;
+    box-shadow: map-get($shadows, "boxes");
+    margin-top: 8px;
+    &:hover {
+        cursor: pointer;
+        background-color: map-get($colors, "btnHover-bg");
+    }
+
+    &:active {
+        transform: scale(96%);
+    }
+}
+
+@mixin ResetTexts ($align, $margin:0) {
+    text-align: $align;
+    margin: $margin;
+}
+
+@mixin bgImg($url) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin grid ($columns, $rows, $areas, $gap:5px) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+    grid-template-areas: $areas;
+}

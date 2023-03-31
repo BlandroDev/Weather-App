@@ -1,0 +1,41 @@
+@import "../configStyles/mixins";
+@import "../configStyles/vars";
+
+.SearchInput {
+    width: 100%;
+    background-color: map-get($colors, "inputSearch-bg");
+    padding: 5px 0px;
+    border-radius: 20px;
+    box-shadow: map-get($shadows, "boxes");
+
+    &__button {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__form {
+        @include flexAlign(normal, none, none, space-around);
+    }
+
+    &__img {
+        @include size(25px, 100%);
+    }
+
+    &__inputText {
+        @include size(80%, 100%);
+        outline: none;
+        border: none;
+        background-color: transparent;
+        text-align: start;
+        color: map-get($colors, "text");
+        font-size: map-get($fontSizes, "normal");
+
+        &::placeholder {
+            color: #ffffffb2;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+
+.AirPollution{
+    @include size(100%,100%);
+    @include flexAlign(column,20px);
+    position: relative;
+    background: map-get($colors, "boxes-details-bg" );
+    border-radius: 10px;
+    display: none;
+    grid-area: airPollution;
+    overflow: hidden;
+    box-shadow:map-get($shadows, "boxes" );
+
+    &__advancedDetails {
+        @include size(90%,85%);
+        @include flexAlign(column);
+        border-radius: 10px;
+        background-color: map-get($colors, "advancedDetails-bg" );
+        box-shadow: map-get($shadows, "boxes" );
+
+        &--viewDetails{
+            @include flexAlign(normal,0px,nowrap,space-between);
+            width: 95%;
+        }
+
+        @include responsive(330px){
+            @include size(95%,80%);
+            font-size: 14px;
+        }
+
+        @include responsive(290px){
+            font-size: 13px;
+        }
+    }
+
+    &__airQualityBox {
+        @include flexAlign(column);
+        @include w_h_p_m(90%,auto,0,25px 0px 0px 0px);
+        border-radius: 10px;
+    }
+
+    &__controlBox {
+        @include flexAlign(normal,5px);
+        padding: 0;
+        margin-bottom: 12px;
+    }
+
+    &__detailsPollutionBox {
+        @include size(100%,100%);
+        @include flexAlign(column,0px,nowrap,start);
+        @include bgImg(url(../../../assets/fondos/airPollution/airPollutionImg.jpg));
+        color:map-get($colors,"text");
+        box-shadow: map-get($shadows, "boxes");
+        position: absolute;
+        top: 0px;
+        border-radius:10px;
+        opacity: 1;
+        overflow: hidden;
+        transform: translateY(92%);
+        transition: transform 1s ease-in-out;
+    }
+
+    &__h3 {
+        &--advancedDetails {
+            margin: 2px;
+        }
+
+        &--airQualityBox {
+            text-align: center;
+        }
+    }
+
+    &__img {
+        &--controlBox {
+            @include w_h_p_m(20px,20px);
+            transition: transform 1s ease-in-out;
+        }
+        &--airQualityBox{
+            @include size (70px,70px);
+        }
+    }
+
+    &__input {
+        &--controlBox {
+            width: 140px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: map-get($colors, "text");
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: end;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &__p{
+        &--viewDetails{
+            margin: 1px;
+        }
+    }
+
+    @include responsive(550px){
+        display: flex;
+        min-height: 270px;
+    }
+}
+
+.transform {
+    &__icon{
+        transform: rotate(180deg);
+    }
+    &__detailsPollutionBox{
+        transform:translateY(0);
+    }
+}
+
+.display{
+    &--hidden{
+        display: none;
+    }
+
+    &--visible{
+        display: flex;
+    }
+}
+
+.strong{
+    font-weight: 600;
+}

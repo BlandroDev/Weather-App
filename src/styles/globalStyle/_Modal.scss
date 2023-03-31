@@ -1,0 +1,65 @@
+@import "../configStyles/mixins";
+@import "../configStyles/vars";
+
+.ModalBox {
+    @include fullSize(100%, 100%, 100vh, 100%);
+    @include flexAlign();
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+    transition: z-index 0.4s map-get($transition, "modals");
+
+    &__cardContent {
+        @include fullSize(400px, 400px, 605px, auto);
+        padding: 12px;
+        background-color: map-get($colors, "modal-bg");
+        backdrop-filter: blur(10px);
+        box-shadow: map-get($shadows, "boxes");
+        border-radius: map-get($borders, "radius");
+        @include flexAlign(column);
+        border: map-get($borders, "main-border");
+        transform: scale(0);
+        transition: transform 0.4s map-get($transition, "modals");
+
+        @include responsive (550px) {
+            @include fullSize();
+            border: none;
+            padding: 0;
+            border-radius: 0px;
+            box-shadow: none;
+            justify-content: start;
+        }
+    }
+
+    &__card {
+        @include responsive (550px) {
+            @include fullSize();
+            padding: 0;
+            border-radius: 0px;
+        }
+    }
+
+    &__img {
+        &--cardContent {
+            @include positionAbsoluteRT(10px, 10px);
+            @include w_h_p_m(30px, auto);
+            cursor: pointer;
+            z-index: 10;
+        }
+    }
+
+    @include responsive (550px) {
+        overflow: visible;
+    }
+}
+
+.transform {
+    &--ModalBox {
+        z-index: 200;
+    }
+
+    &--cardContent {
+        transform: scale(1);
+    }
+}

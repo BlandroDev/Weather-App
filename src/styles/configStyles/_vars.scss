@@ -1,0 +1,29 @@
+$colors:("text" : #fff,
+    "main-bg" : rgba(114, 114, 114, 0.349),
+    "btn-bg" : #ffffff63,
+    "btnHover-bg" : #ffffff7e,
+    "inputSearch-bg" : #ffffff63,
+    "modal-bg" : #ffffff13,
+    "box-bg" : rgba(255, 255, 255, 0.219),
+    "boxHover-bg" : rgba(255, 255, 255, 0.404),
+    "time" : rgba(255, 255, 255, 0.753),
+    "boxes-details-bg" :rgba(197, 188, 188, 0.438),
+    "moreDetails-text" : #ffffffd7,
+    "advancedDetails-bg": #ffffff25,
+    "boxForecast-bg" : #ffffff27,
+);
+
+$shadows : ("boxes" : rgba(0, 0, 0, 0.24) 0px 3px 8px,
+    "text" : 1px 1px 2px rgba(0, 0, 0, 0.336),
+);
+
+$transition : ("modals" : ease-out,
+);
+
+$borders : ("main-border" :1px solid #ffffff25,
+    "radius" : 20px,
+);
+
+$fontSizes : ("normal" : 15px,
+    "mainTemperature" : 60px,
+);

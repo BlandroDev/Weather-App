@@ -1,0 +1,11 @@
+@import "../configStyles/mixins";
+@import "../configStyles/vars";
+.SearchPage{
+    @include fullSize(none,100%,605px,100%);
+    @include flexAlign(column,10px,none,flex-start);
+    color: map-get($colors,"text" );
+    @include responsive (550px) {
+        min-height: 100vh;
+        width: 95%;
+    }
+}

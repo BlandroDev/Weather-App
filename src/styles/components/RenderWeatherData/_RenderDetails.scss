@@ -1,0 +1,103 @@
+@import "../../configStyles/mixins";
+
+.RenderDetails {
+    @include size(100%,590px);
+    @include flexAlign(normal,0px,nowrap,center,flex-start);
+    position: relative;
+    @include responsive(550px) {
+        @include size(100vw,100%);
+    }
+
+    &__airPollutionBox {
+        grid-area: airPollution;
+        @include responsive(550px){
+            display: none;
+        }
+    }
+
+    &__content {
+        @include size(100%,auto);
+        @include grid(repeat(2,195px),35px 1fr 1fr 270px,"title title" "sunrise details" "sunset details" "airPollution airPollution",10px);
+        border-radius: 10px;
+        color:map-get($colors, "text");
+        justify-content: center;
+        @include responsive(550px) {
+            width: 95%;
+            @include grid(repeat(2,1fr),50px 500px 180px,"title title" "details details" "sunrise sunset",10px);
+            margin-top: 30px;
+        }
+    }
+
+    &__details {
+        &--content {
+            grid-area: details;
+            &>div:first-child{
+                border: none;
+            }
+
+            &>div{
+                @include flexAlign(normal,0px,nowrap,space-between);
+                height: 35px;
+                border-top: 1px solid #fff;
+                @include responsive(550px) {
+                    height: 70px;
+                }
+            }
+        }
+    }
+
+    &__h1 {
+        &--content {
+            grid-area: title;
+            @include ResetTexts(center);
+        }
+    }
+
+    &__sunrise{
+        grid-area: sunrise;
+        align-items: center;
+    }
+
+    &__sunset{
+        grid-area: sunset;
+        align-items: center;
+    }
+
+    &__img{
+        &--content{
+            @include size(80px,auto);
+            @include responsive(550px){
+                @include size(100px,auto);
+            }
+        }
+    }
+
+    &__p{
+        &--TwilightType{
+            margin: 0;
+            @include responsive(550px) {
+                font-size: 18px;
+            }
+        }
+
+        &--content{
+            margin:3px;
+            @include responsive(550px){
+                margin: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.strong{
+    font-weight:600;;
+}
+
+.box{
+    @include flexAlign(column,0px,nowrap,space-between,none);
+    background-color: map-get($colors, "boxes-details-bg" );
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: map-get($shadows,"boxes");
+}

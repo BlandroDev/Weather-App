@@ -1,0 +1,21 @@
+@import "../configStyles/mixins";
+@import "../configStyles/vars";
+.PublicRoutes {
+    @include fullSize(none,400px,605px,auto);
+    @include flexAlign(column,none,none,center,none);
+    box-shadow: map-get($shadows, "boxes" );
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: map-get($colors, "main-bg" );
+    padding: 12px;
+    overflow: hidden;
+    border: map-get($borders,"main-border");
+
+    @include responsive(550px){
+        @include fullSize(100vw,100vw,100vh,auto);
+        border: none;
+        border-radius: 0px;
+        padding: 10px 0px;
+        align-items: center;
+    }
+}

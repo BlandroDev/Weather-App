@@ -1,0 +1,23 @@
+@import "../configStyles/vars";
+@import "../configStyles/mixins";
+
+.ErrorPage {
+    @include fullSize(100%,100%,555px,100%);
+    @include flexAlign(column);
+
+    &__main{
+        @include flexAlign(column,none,none,none);
+    }
+
+    &__h4 {
+        &--main {
+            color: map-get($colors, "text");
+        }
+    }
+
+    &__img {
+        &--main {
+            @include size(100px,auto);
+        }
+    }
+}

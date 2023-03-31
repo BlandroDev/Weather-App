@@ -1,0 +1,10 @@
+@import "../configStyles/vars";
+.CurrentTime {
+    &__p {
+        &--main {
+            color: map-get($colors, "time");
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    }
+}

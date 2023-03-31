@@ -1,0 +1,47 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+.CitieBox {
+    @include w_h_p_m(196px,145px);
+    @include flexAlign(column);
+    background-color: map-get($colors, "box-bg");
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: map-get($shadows, "boxes");
+    transition: background 0.5s, transform 0.5s;
+
+    &:hover{
+        background-color: map-get($colors, "boxHover-bg");
+    }
+
+    &:active{
+        transform: scale(96%);
+    }
+
+    &__img {
+        @include w_h_p_m(50px,50px);
+    }
+
+    @include responsive(420px){
+        @include size(190px,180px);
+    }
+
+    @include responsive(407px){
+        @include size(180px,180px);
+    }
+
+    @include responsive(389px){
+        @include size(170px,170px);
+    }
+
+    @include responsive(365px){
+        @include size(160px,170px);
+    }
+
+    @include responsive(344px){
+        @include size(150px,160px);
+    }
+
+    @include responsive(324px){
+        @include size(95%,160px);
+    }
+}

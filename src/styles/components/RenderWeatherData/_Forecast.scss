@@ -1,0 +1,75 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+.Forecast {
+    @include size(100%,50px);
+    @include grid(1fr 70px 50px,100%,"hour pop temperature");
+    font-size: map-get($fontSizes , "normal");
+    background: transparent;
+    justify-content: space-between;
+
+    &__TemperatureBox {
+        @include flexAlign(normal,none,nowrap,end);
+        grid-area: temperature;
+    }
+
+    &__hourBox {
+        @include flexAlign(normal,10px,nowrap,start);
+        grid-area: hour;
+    }
+
+    &__img {
+        &--popBox {
+            @include size(20px,20px);
+        }
+
+        &--hourBox{
+            @include size(40px,40px);
+        }
+    }
+
+    &__p {
+        &--TemperatureBox {
+            font-size: 16.5px;
+            font-weight: 700;
+            padding-right: 10px;
+            margin: 15px 0px;
+        }
+
+        &--hourBox {
+            font-size: map-get($fontSizes, "normal");
+            margin: 15px 0px;
+        }
+
+        &--popBox {
+            padding-right: 10px;
+            margin: 15px 0px;
+        }
+    }
+
+    &__popBox {
+        @include flexAlign(normal,none,nowrap,start);
+        grid-area: pop;
+        @include responsive(318px){
+            display: none;
+        }
+    }
+
+    @include responsive(425px) {
+        grid-template-columns: 1fr 60px 50px;
+    }
+
+    @include responsive(318px){
+        @include grid(1fr 50px, 100%, "hour temperature")
+    }
+}
+
+.nextHoursStyle{
+    padding: 0px 5px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    background-color: map-get($colors, "boxes-details-bg" );
+    box-shadow: map-get($shadows, "boxes");
+    @include responsive (550px) {
+        @include size(100%,80px);
+    }
+}

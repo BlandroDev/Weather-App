@@ -1,0 +1,45 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@import "./globalStyle/Modal";
+@import "./components/CurrentTime";
+@import "./components/ErrorPage";
+@import "./components/HomePage/HomePage";
+@import "./configStyles/mixins";
+@import "./components/HomePage/AlternateView";
+@import "./components/HomePage/Cities";
+@import "./components/SearchPage";
+@import "./components/RenderWeatherData/AirPollution";
+@import "./components/RenderWeatherData/Forecast";
+@import "./components/RenderWeatherData/NextHours";
+@import "./components/RenderWeatherData/RenderMainPage";
+@import "./components/RenderWeatherData/RenderDetails";
+@import "./components/PublicRoutes";
+@import "./components/SearchInput";
+
+.App {
+    @include flexAlign();
+    @include fullSize(none,100%,100vh,auto);
+    position: relative;
+  }
+
+  
+body {
+    position: relative;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    transition: background 1s;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }

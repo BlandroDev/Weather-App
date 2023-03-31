@@ -1,0 +1,28 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+.NextHours{
+    color: map-get($colors,"text");
+    @include fullSize(100%,100%,595px,100%);
+    @include flexAlign(column,5px);
+    position: relative;
+
+    &__forecastBox {
+        @include size(390px,auto);
+        @include flexAlign(column,0px,nowrap,start);
+        border-radius: 20px;
+        @include responsive (550px) {
+            @include size(92%,90%);
+            margin: auto;
+        }
+    }
+
+    &__h1 {
+        margin: 20px 0px 5px 0px;
+    }
+
+    @include responsive (550px) {
+        @include size(100vw,100%);
+         justify-content: start;
+        padding-top: 20px;
+    }
+}

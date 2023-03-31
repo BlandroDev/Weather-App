@@ -1,0 +1,86 @@
+@import "../../configStyles/mixins";
+@import "../../configStyles/vars";
+.RenderMainPage {
+    @include fullSize(100%,100%,100%,100%);
+    @include flexAlign(column,10px);
+
+    &__boxForecast {
+        @include size(100%,auto);
+        @include flexAlign(normal,none,none,center,start);
+        position: relative;
+        background-color: map-get($colors, "boxForecast-bg");
+        border-radius: 20px;
+        padding: 10px 0px;
+        box-shadow: map-get($shadows, "boxes");
+        @include responsive (550px) {
+            min-height: auto;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__button {
+        &--boxForecast {
+          @include btn-secondary();
+        }
+    }
+
+    &__content {
+        &--boxForecast {
+            @include size(95%,auto);
+            @include flexAlign(column,none,none,flex-start);
+            position: relative;
+            padding: 5px 0px;
+        }
+    }
+
+    &__img{
+        &--LocationIcon{
+            width: 30px;
+            padding: 0;
+        }
+
+        &--HomeIcon{
+            width: 30px;
+            margin: auto;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__h2{
+        @include size(95%,35px);
+        text-align: center;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    &__h1{
+        font-size: map-get($fontSizes, "mainTemperature");
+        font-weight: 400;
+        margin: 0;
+        padding:0;
+        text-shadow: map-get($shadows, "text" );
+    }
+
+    &__p{
+        &--moreDetails{
+            cursor: pointer;
+            outline: none;
+            border: none;
+            right: 5px;
+        }
+        color:  map-get($colors, "moreDetails-text" );
+    }
+
+    &__moreDetails{
+        @include size(95%,40px);
+        @include flexAlign(normal,none,none,space-between,none);
+        color:  map-get($colors, "moreDetails-text" );
+    }
+
+    a{
+        margin: 0;
+        padding: 0;
+    }
+}
