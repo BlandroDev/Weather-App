@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+#gitignore
+/.gitignore
+
+
 # production
 /build
 
