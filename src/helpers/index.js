@@ -21,4 +21,4 @@ export const urlCurrentWeatherSearch = (
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=${lang}&units=${units}`;
 
 export const urlAirPollution = (key, lat, long) =>
-  `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${key}`;
+  `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${key}`;
