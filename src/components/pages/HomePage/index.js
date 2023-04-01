@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Inicio | Weather App</title>
+        <title>Weather App</title>
       </Helmet>
       <div className="HomePage">
         <SearchInput />
