@@ -11,7 +11,10 @@
     grid-area: airPollution;
     overflow: hidden;
     box-shadow:map-get($shadows, "boxes" );
-
+    transition: transform 0.5s;
+    &:active{
+        transform: scale(96%);
+    }
     &__advancedDetails {
         @include size(90%,85%);
         @include flexAlign(column);

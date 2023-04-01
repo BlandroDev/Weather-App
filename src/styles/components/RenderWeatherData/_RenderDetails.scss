@@ -100,4 +100,8 @@
     border-radius: 10px;
     padding: 5px;
     box-shadow: map-get($shadows,"boxes");
+    transition: transform 0.5s;
+    &:active{
+        transform: scale(96%);
+    }
 }

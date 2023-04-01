@@ -69,7 +69,11 @@
     border-radius: 20px;
     background-color: map-get($colors, "boxes-details-bg" );
     box-shadow: map-get($shadows, "boxes");
+    transition: transform 0.5s;
     @include responsive (550px) {
         @include size(100%,80px);
+    }
+    &:active{
+        transform: scale(96%);
     }
 }

@@ -12,9 +12,13 @@
         border-radius: 20px;
         padding: 10px 0px;
         box-shadow: map-get($shadows, "boxes");
+        transition: transform 0.5s;
         @include responsive (550px) {
             min-height: auto;
             padding-bottom: 15px;
+        }
+        &:active{
+            transform: scale(96%);
         }
     }
 

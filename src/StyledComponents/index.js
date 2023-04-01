@@ -14,6 +14,9 @@ export const BackgroundImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 200;
-  transition: background 1s;
+  transition: background 1s, transform 0.5s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  &:active {
+    transform: scale(96%);
+  }
 `;
