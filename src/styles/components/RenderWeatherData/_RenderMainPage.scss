@@ -75,6 +75,17 @@
             right: 5px;
         }
         color:  map-get($colors, "moreDetails-text" );
+        &--HomeIcon{
+            margin: 0;
+        }
+    }
+
+    &__a{
+        &--HomeIcon{
+            @include flexAlign(normal,5px);
+            text-decoration: none;
+            color: map-get($colors, "text" );
+        }
     }
 
     &__moreDetails{
