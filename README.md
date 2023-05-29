@@ -34,12 +34,12 @@
 <img src='https://github.com/BlandroDev/Weather-App/assets/129313001/2a397022-ff03-44ac-9548-f648af19318e'/>
   
  <h2>Capturas de ejemplo en algunos cambios climaticos 📸</h2>
-  <h3>Foggy Day :foggy:</h3>
+  <h3>Día con niebla :foggy:</h3>
   <img src='https://github.com/BlandroDev/Weather-App/assets/129313001/94b94f74-b757-4abc-b33c-8e4a661712cb'/>
-  <h3>Rainy Day :umbrella:</h3>
+  <h3>Día lluvioso :umbrella:</h3>
   <img src='https://github.com/BlandroDev/Weather-App/assets/129313001/4d3cc846-5785-473c-b02c-355614c66908'/>
-  <h3>Rainy Night :umbrella:</h3>
+  <h3>Noche lluviosa :umbrella:</h3>
   <img src='https://github.com/BlandroDev/Weather-App/assets/129313001/4ea985f0-75b3-46d8-af5c-0381fd33cbda'/>
-  <h3>Cloudy Day :cloud:</h3>
+  <h3>Día nublado :cloud:</h3>
   <img src='https://github.com/BlandroDev/Weather-App/assets/129313001/93e58aca-34ea-4176-97c3-0489c0b1dca0'/>
 </div>
