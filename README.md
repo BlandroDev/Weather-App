@@ -20,7 +20,6 @@
 
 » Sass / Scss <br>
 » React JS <br>
-» Vite JS
 
 <h2>Capturas del Proyecto 📸</h2>
 <br>
